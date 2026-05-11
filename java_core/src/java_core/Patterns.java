@@ -1,9 +1,10 @@
 package java_core;
 
 public class Patterns {
-
+//patterns
 	public static void main(String[] args) {
 		int n = 5;
+		System.out.println("Patterns");
 		pattern1(n);
 		System.out.println("--------------------------------------------------");
 		pattern2(n);
