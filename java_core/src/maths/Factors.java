@@ -1,0 +1,57 @@
+package maths;
+
+import java.util.ArrayList;
+
+public class Factors {
+
+	public static void main(String[] args) {
+		int n = 20 ;
+
+		factors1(n);
+		System.out.println();
+		factors2(n);
+		System.out.println();
+		factors3(n);
+	}
+//	O(n)
+	static void factors1(int n ) {
+		for(int i=1;i<=n;i++) {
+			if(n%i==0) {
+				System.out.print(i+" ");
+			}
+			
+		}
+	}
+//  O(sqrt(n))
+	static void factors2(int n ) {
+		for(int i=1;i<=Math.sqrt(n);i++) {
+			if(n%i==0) {
+				if(n/i==1) {
+					System.out.print(i+" ");
+				}
+				else {
+					System.out.print(i+" " + n/i+" ");
+				}
+			}
+			
+		}
+	}
+//  O(sqrt(n))
+	static void factors3(int n ) {
+		ArrayList<Integer> list = new ArrayList<>();
+		for(int i=1;i<=Math.sqrt(n);i++) {
+			if(n%i==0) {
+				if(n/i==1) {
+					System.out.print(i+" ");
+				}
+				else {
+					System.out.print(i+" ");
+					list.add(n/i);
+				}
+			}
+		}
+		for(int i1 = list.size()-1;i1>=0;i1--) {
+			System.out.print(list.get(i1)+" ");
+		}
+	}
+}
