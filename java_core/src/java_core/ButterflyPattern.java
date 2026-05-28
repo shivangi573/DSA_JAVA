@@ -3,7 +3,7 @@ package java_core;
 public class ButterflyPattern {
 
 	public static void main(String[] args) {
-		int n = 6;
+		int n = 10;
 		//uper wala part:
 		for(int row = 1; row<=n;row++ ) {
 			//left stars
